@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="~/Scripts/Index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+    </div>
+    <div class="container">
+        <h2 class="heading">Danh sách thành viên</h2>
+        <div class="options">
+            <button class="btn btn-group-vertical" id="btn-create">@Html.ActionLink("Tạo tài khoản mới", "CreateAccount", "Home") </button>
+            <input class="input-search" type="search" placeholder="Tìm kiếm">
+        </div>
+        <div id="tb_grid"></div>
+
+    </div>
+    @*@Html.ActionLink("Tạo tài khoản mới", "Create", "Home")  --> *@
+
+    <div class="update" style="display:none">
+        <form action="" method="POST" class="form" id="form-2">
+            <div style="display:none" class="form-group ">
+                <label for="id" class="form-label">ID</label>
+                <input id="id" name="id" type="text" placeholder="id" class="form-control" readonly>
+                <span class="form-message"></span><!--xuất hiện khi lỗi-->
+            </div>
+            <div class="form-group ">
+                <label for="fullname" class="form-label">Tên đăng nhập</label>
+                <input id="fullname" name="fullname" type="text" placeholder="Nhập tên đăng nhập" class="form-control" @*readonly*@>
+                <span class="form-message"></span><!--xuất hiện khi lỗi-->
+            </div>
+            <div class="form-group ">
+                <label for="email" class="form-label">Email</label>
+                <input id="email" name="email" type="text" placeholder="Nhập email" class="form-control">
+                <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="phone_number" class="form-label">Số điện thoại</label>
+                <input id="phone_number" name="phone-number" placeholder="Số điện thoại" type="text" class="form-control">
+                <span class="form-message"></span>
+            </div>
+            <button class="form-submit btn-update">Cập nhật</button>
+        </form>
+    </div>
+    <div class="changePassword" style="display:none">
+        <form action="" method="POST" class="form" id="form-3">
+            <div style="display:none" class="form-group ">
+                <label for="idchange" class="form-label">ID</label>
+                <input id="idchange" name="id" type="text" placeholder="id" class="form-control" readonly>
+                <span class="form-message"></span><!--xuất hiện khi lỗi-->
+            </div>
+            <div class="form-group ">
+                <label for="fullname" class="form-label">Tên đăng nhập</label>
+                <input id="fullnamechange" name="fullname" type="text" placeholder="Nhập tên đăng nhập" class="form-control" readonly>
+                <span class="form-message"></span><!--xuất hiện khi lỗi-->
+            </div>
+            <div class="form-group ">
+                <label for="email" class="form-label">Email</label>
+                <input id="emailchange" name="email" type="text" placeholder="Nhập email" class="form-control" readonly>
+                <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input id="passwordchange" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+                <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
+                <input id="password_confirmationchange" name="password_confirmation" placeholder="Nhập lại mật khẩu" type="password" class="form-control">
+                <span class="form-message"></span>
+            </div>
+            <button class="form-submit btn-changePassword">Đổi mật khẩu</button>
+        </form>
+        
+</div>
+</body>
+
+</html>
+
