@@ -136,3 +136,25 @@ html {
     margin-bottom:10px;
     font-size:13px;
 }
+/*------------*/
+.container-chat {
+    max-width: 90%;
+}
+
+.panel-heading {
+    background-color: #bdb6b6;
+}
+
+.panel-body {
+    overflow-y: scroll;
+    height: 200px;
+    background: url('https://haycafe.vn/wp-content/uploads/2021/12/Hinh-nen-mau-trang-3.jpg')
+}
+
+.panel-footer {
+    height: 45px;
+}
+
+#message {
+    width: 90%;
+}

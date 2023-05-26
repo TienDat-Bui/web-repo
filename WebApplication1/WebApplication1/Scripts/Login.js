@@ -8,6 +8,7 @@ $('.form-submit').on('click', (e) => {
         var fullname = $('#fullname').val();
         var password = $('#password').val();
         console.log(fullname, password);
+        localStorage.setItem('userName', fullname);
         LoginUser(fullname, password);
     }
     else {
@@ -44,5 +45,5 @@ const LoginUser = (fullname, password) => {
 
 
 loadHome = () => {
-    window.location.href = "HOME/Index";
+    window.location.href = "HOME/chat";
 }

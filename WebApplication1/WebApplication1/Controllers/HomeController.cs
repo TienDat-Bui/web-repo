@@ -50,7 +50,10 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-
+        public ActionResult Chat()
+        {
+            return View();
+        }
         public object getAllAccount()
         {
             string queryString = "EXEC dbo.UPS_selecAllACcount";
