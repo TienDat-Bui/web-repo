@@ -66,5 +66,5 @@ CreateUser = (data) => {
 
 loadHome = () => {
     /// chuyển về trang index
-    window.location.href = "Index"; //chưa tìm được thông tin chổ này
+    window.location.href = "login"; //chưa tìm được thông tin chổ này
 }

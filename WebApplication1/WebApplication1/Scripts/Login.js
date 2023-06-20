@@ -45,5 +45,5 @@ const LoginUser = (fullname, password) => {
 
 
 loadHome = () => {
-    window.location.href = "HOME/chat";
+    window.location.href = "home/chat";
 }
