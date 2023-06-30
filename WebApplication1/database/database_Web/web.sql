@@ -27,8 +27,7 @@ BEGIN
 	SELECT *FROM dbo.allAccount
 END
 GO
---tạo store proceduce insert
-alter PROC dbo.UPS_insertAccount
+-CREATE PROC dbo.UPS_insertAccount
 @fullname NVARCHAR(100),@email VARCHAR(30),@phone_number CHAR(20),@pass_word CHAR(40)
 AS
 BEGIN
@@ -40,7 +39,7 @@ BEGIN
 END
 GO
 --tạo store updateAccount
-alter PROC dbo.UPS_updateAccount
+CREATE PROC dbo.UPS_updateAccount
 @id INT , @fullname NVARCHAR(100),@email VARCHAR(30),@phone_number CHAR(20),@pass_word CHAR(40)
 AS
 BEGIN
@@ -55,7 +54,7 @@ GO
  --Tạo Store Proceduce selecAllAccount
 
 --Tạo store procudeuce login
-alter PROC USP_login 
+CREATE PROC USP_login 
 (@fullname NVARCHAR(100),@password CHAR(40))
 AS
 BEGIN
@@ -63,7 +62,7 @@ SELECT COUNT(*) FROM dbo.allAccount WHERE fullname = @fullname AND pass_word = @
 END
 GO  
 --cập nhật store tìm kiếm 
-alter PROC dbo.UPS_updateAccount
+CREATE PROC dbo.UPS_updateAccount
 @id INT , @fullname NVARCHAR(100),@email VARCHAR(30),@phone_number CHAR(40)
 AS
 BEGIN

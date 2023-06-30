@@ -53,7 +53,7 @@ CreateUser = (data) => {
                 loadHome();
             }
             else {
-                alert('tên đăng nhập đã tồn tại')
+                alert('tên đăng nhập hoặc email đã tồn tại')
             }
         }, Error: function (err) {
             alter('có lỗi xảy ra');
